@@ -1,1 +1,1 @@
-# slidefy
+# slideit
