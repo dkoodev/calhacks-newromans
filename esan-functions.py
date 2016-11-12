@@ -76,6 +76,8 @@ double_list = []
 for x in range(0, num_range):
 	double_list.append([attractions[x],description[x]])
 	print double_list[x]
+
+json.dumps(double_list)
 # double_list = sorted(double_list, reverse = True)
 
 # print double_list

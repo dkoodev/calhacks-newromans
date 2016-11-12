@@ -8,6 +8,10 @@
 			$command = escapeshellcmd ('python esan-functions.py');
 			$output = shell_exec($command);
 			echo $output;
+
+			$resultData = json_decode($result, true);
+
+			var_dump($resultData); 
 		?>
 	</body>
 </html>
