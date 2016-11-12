@@ -2,6 +2,27 @@ body {
 	background-image: url('../pictures/1.jpg');
 	background-size: cover;
 	background-attachment: fixed;
+	font-family: Satisfy;
+}
+
+@font-face {
+	font-family: Seaweed;
+	src: url('../fonts/SeaweedScript-Regular.ttf');
+}
+
+@font-face {
+	font-family: Satisfy;
+	src: url('../fonts/Satisfy-Regular.ttf');
+}
+
+@font-face {
+	font-family: Merriwether;
+	src: url('../fonts/MerriwetherSans-Regular.ttf');
+}
+
+@font-face {
+	font-family: Bitter;
+	src: url('../fonts/Bitter-Regular.otf');
 }
 
 @keyframes fadeIn {
@@ -10,6 +31,7 @@ body {
 }
 
 #history {
+	font-family: Bitter;
 	animation-name: fadeIn;
 	animation-duration: 2s;
 	font-size: 25px;
@@ -21,17 +43,18 @@ body {
 #destination {
 	width: 50%;
 	margin: auto;
-	padding-top: 8%;
+	padding-top: 6%;
 }
 
 #destinationPrompt {
-	font-size: 50px;
+	font-size: 55px;
 	text-align: center;
 	padding-bottom: 10%;
 	opacity: 0.7;
 }
 
 #destinationInput {
+	font-family: Bitter;
 	width: 85%;
 	margin: auto;
 	font-size: 20px;
@@ -41,6 +64,7 @@ body {
 }
 
 #destinationButton {
+	font-family: Bitter;
 	float: right;
 	font-size: 30px;
 	color: gray;
@@ -55,17 +79,18 @@ body {
 	animation-duration: 2s;
 	width: 50%;
 	margin: auto;
-	padding-top: 8%;
+	padding-top: 6%;
 }
 
 #startPrompt {
-	font-size: 50px;
+	font-size: 55px;
 	text-align: center;
 	padding-bottom: 10%;
 	opacity: 0.7;
 }
 
 #startInput {
+	font-family: Bitter;
 	width: 85%;
 	margin: auto;
 	font-size: 20px;
@@ -75,6 +100,7 @@ body {
 }
 
 #startButton {
+	font-family: Bitter;
 	float: right;
 	font-size: 30px;
 	color: gray;

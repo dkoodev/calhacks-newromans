@@ -76,4 +76,16 @@
         setupClickListener('changetype-address', ['address']);
         setupClickListener('changetype-establishment', ['establishment']);
         setupClickListener('changetype-geocode', ['geocode']);
+
+        var marker1 = {start};
+        var marker2 = {destination};
+        var markerA = new google.maps.Marker({
+          position: marker1,
+          map: map
+        }
+        var markerB = new google.maps.Marker({
+          position: marker2,
+          map: map
+        }
+
       }
