@@ -14,7 +14,7 @@ var locations = ["E.g. Grand Canyon, United States"
 , "E.g. Aokigahara, Japan"
 , "E.g. New York City, United States"
 , "E.g. Anahola, United States"
-, "E.g. Lake Sinclair, United States"
+, "E.g. Glacier National Park, United States"
 , "E.g. Alberta, Canada"
 , "E.g. Shawnee Mountain, United States"]
 
