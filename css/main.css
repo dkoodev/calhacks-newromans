@@ -124,4 +124,29 @@ body {
 
 #confirmation  {
 	display: none;
+	width: 100%;
+	margin: auto;
+}
+
+#confirmation img {
+	padding-top: 4%;
+	width: 40%;
+	margin: 0 30%;
+}
+
+#confirmationButton {
+	margin-top: 3%;
+	font-family: Bitter;
+	text-align: center;
+	font-size: 30px;
+	color: gray;
+	padding: 15px;
+	background-color: white;
+	border-radius: 5px;
+}
+
+#confirmationButton:hover {
+	cursor: pointer;
+	background-color: gray;
+	color: white;
 }

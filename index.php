@@ -21,7 +21,7 @@
 		</div>
 	<div id="start"><div id="startPrompt">Where are you starting from?</div><input type="text" id="startInput" placeholder="E.g. University of Southern California"><div id="startButton">Go</div></div>
     <div id="map"></div>
-    <div id="confirmation"></div>
+    <div id="confirmation"><div id="confirmationButton">Confirm</div></div>
     <div id="tester"> </div> 
 	</body>
 

@@ -14,11 +14,11 @@
         });
 
         // Create the search box and link it to the UI element.
-        var input = document.getElementById('destinationInput');
-        var searchBox = new google.maps.places.SearchBox(input);
+        var input1 = document.getElementById('destinationInput');
+        var searchBox = new google.maps.places.SearchBox(input1);
         // Create the search box and link it to the UI element.
-        var input = document.getElementById('startInput');
-        var searchBox = new google.maps.places.SearchBox(input);
+        var input2 = document.getElementById('startInput');
+        var searchBox = new google.maps.places.SearchBox(input2);
         //map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
         // Bias the SearchBox results towards current map's viewport.
@@ -31,10 +31,6 @@
         // more details for that place.
         searchBox.addListener('places_changed', function() {
           var places = searchBox.getPlaces();
-          destination_longitude = places.geometry.location.lng();
-          console.log(destination_longitude);
-          destination_latitude = places.geometry.location.lat();
-
 
           if (places.length == 0) {
             return;

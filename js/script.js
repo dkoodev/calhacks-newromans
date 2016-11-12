@@ -34,10 +34,12 @@ document.getElementById('startButton').addEventListener('click', function() {
 	start = document.getElementById('startInput').value;
 	document.getElementById('history').innerHTML += ",  from " + start;
 	document.getElementById('confirmation').style.display = "block";
-	
+	var map = "https://maps.googleapis.com/maps/api/staticmap?size=600x300&maptype=roadmap&markers=color:red|label:A|" + start + "&markers=color:yellow|label:B|" + destination + "&key=AIzaSyCaopJNj_frN6fwXANNEKsK6LByLqdaZIA";
+	var x = document.createElement("img");
+	x.setAttribute("src", map);
+	document.getElementById('confirmation').appendChild(x);	
 });
 
-var map = "https://maps.googleapis.com/maps/api/staticmap?size=600x300&maptype=roadmap&markers=color:red|label:A|" + start + "&markers=color:yellow|label:B|" + destination + "&key=AIzaSyCaopJNj_frN6fwXANNEKsK6LByLqdaZIA";
-var x = document.createElement("img");
-x.setAttribute("src", map);
-document.getElementById('confirmation').appendChild(x);
+document.getElementById('confirmationButton').addEventListener('click', function() {
+	document.getElementById('confirmation').style.display = "none";
+});
