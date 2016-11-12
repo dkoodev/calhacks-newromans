@@ -60,23 +60,15 @@ for x in xrange(0, num_range):
 	# for y in range(3)
 	# 	pictures2d[x].insert(data['points_of_interest'][x]['contexual_images']['medium'][y]['url'])
 	# 	print pictures2d[x][y]
-	# description.insert(x, data['points_of_interest'][x]['description'])
-	# index.append(x)
-	#price_arr.insert(x,data['results'][x]['price'])
-	# print price_arr[x]
-	# print "....."
-	#airline_arr.insert(x, data['results'][x]['airline'])
-	# print airline_arr[x]
-	# print "--------"
-	# data_dict= {data['results'][x]['departure_date']:data['results'][x]['price']}
+	
 
-# print(data_dict)
-double_list = []
+double_list = [] # 2D ARRAY WITH ATTRACTION NAME AND DESCRIPTION
 for x in range(0, num_range):
 	double_list.append([attractions[x],description[x]])
 	print double_list[x]
 
-json.dumps(double_list)
+json.dumps(double_list) #PASSES TO PHP (SUPPOSEDLY)
+json.dumps(pictures)
 # double_list = sorted(double_list, reverse = True)
 
 # print double_list

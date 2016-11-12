@@ -12,6 +12,13 @@
 			$resultData = json_decode($output, true);
 
 			var_dump($resultData); 
+			//$result = json_decode(exec('python myscript.py'), true);
+			//echo $result['foo'];
 		?>
+
+		<script type = "text/javascript">
+		var arr = <?php echo json_decode($resultData); ?>
+
+		</script>
 	</body>
 </html>
