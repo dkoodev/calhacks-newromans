@@ -16,6 +16,7 @@
 
 <script type="text/javascript" src="js/script.js" ></script>
 <script type="text/javascript" src="js/google-maps.js"></script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaopJNj_frN6fwXANNEKsK6LByLqdaZIA&libraries=places&callback=initMap" async defer></script>
 
 </html>
