@@ -29,6 +29,8 @@ document.getElementById('destinationButton').addEventListener('click', function(
 	document.getElementById('start').style.display = "block";
 });
 
+
+
 document.getElementById('startButton').addEventListener('click', function() {
 	document.getElementById('start').style.display = "none";
 	start = document.getElementById('startInput').value;
