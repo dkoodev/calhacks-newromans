@@ -37,7 +37,9 @@ document.getElementById('confirmationButton').addEventListener('click', function
             yaxis: {
                 title: 'Price',
                 fixedrange: true
-            }
+            },
+            paper_bgcolor: "rgb(0,0,0,0)",
+            plot_bgcolor: "rgb(0,0,0,0)"
         };
 
         Plotly.plot(document.getElementById('tester'), data, layout);
