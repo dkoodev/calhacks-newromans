@@ -1,8 +1,9 @@
 body {
-	background-image: url('../pictures/0.jpg');
+	background-image: url('../pictures/plane.jpg');
 	background-size: cover;
 	background-attachment: fixed;
 	font-family: Satisfy;
+	opacity: 0.7;
 }
 
 @font-face {
@@ -15,10 +16,23 @@ body {
 	src: url('../fonts/Bitter-Regular.otf');
 }
 
+#back {
+	width: 55px;
+	height: 55px;
+	padding-left: 1%;
+	padding-top: 1%;
+}
+
+#back:hover {
+	opacity: 0.6;
+}
+
 #header {
+	width: 60%;
+	margin: 0 20%;
 	text-align: center;
-	font-size: 75px;
-	padding: 2% 0;
+	font-size: 65px;
+	padding-bottom: 2%;
 }
 
 #info {
