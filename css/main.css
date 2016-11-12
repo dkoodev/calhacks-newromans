@@ -19,6 +19,13 @@ body {
 	to {opacity: 1;}
 }
 
+#icon {
+	width: 45px;
+	height: 45px;
+	padding-left: 1%;
+	padding-top: 1%;
+}
+
 #history {
 	font-family: Bitter;
 	animation-name: fadeIn;
