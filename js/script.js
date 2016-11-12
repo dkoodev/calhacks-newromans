@@ -37,7 +37,7 @@ document.getElementById('startButton').addEventListener('click', function() {
 	
 });
 
-var map = "https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue|label:S|40.702147,-74.015794&markers=color:green|label:G|40.711614,-74.012318&markers=color:red|label:C|40.718217,-73.998284&key=AIzaSyCaopJNj_frN6fwXANNEKsK6LByLqdaZIA";
+var map = "https://maps.googleapis.com/maps/api/staticmap?size=600x300&maptype=roadmap&markers=color:red|label:A|" + start + "&markers=color:yellow|label:B|" + destination + "&key=AIzaSyCaopJNj_frN6fwXANNEKsK6LByLqdaZIA";
 var x = document.createElement("img");
 x.setAttribute("src", map);
 document.getElementById('confirmation').appendChild(x);
