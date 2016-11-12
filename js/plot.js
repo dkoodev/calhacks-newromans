@@ -24,7 +24,7 @@ var selectorOptions = {
     }],
 };
 
-document.getElementById('startButton').addEventListener('click', function() {
+document.getElementById('confirmationButton').addEventListener('click', function() {
     Plotly.d3.csv(rawDataURL, function(err, rawData) {
         if(err) throw err;
 
@@ -49,8 +49,12 @@ document.getElementById('startButton').addEventListener('click', function() {
 function prepData(rawData) {
     var x = [];
     var y = [];
-    var info = []
+    var info = [];
+
+    console.log(rawData.length)
+
     rawData.forEach(function(datum, i) {
+        if(i % 100) return;
 
         x.push(new Date(datum[xField]));
         y.push(datum[yField]);
