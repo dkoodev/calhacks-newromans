@@ -38,7 +38,7 @@ Plotly.d3.csv(rawDataURL, function(err, rawData) {
         }
     };
 
-    Plotly.plot('graph', data, layout);
+    Plotly.plot(document.getElementById('tester'), data, layout);
 });
 
 function prepData(rawData) {
