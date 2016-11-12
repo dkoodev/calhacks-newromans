@@ -27,42 +27,42 @@ function createURL(addr,str){
 
 function httpGetAsync(theUrl, callback, string)
 {
-	current = string;
+
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-            callback(xmlHttp.responseText);
+            callback(xmlHttp.responseText,string);
     }
     xmlHttp.open("GET", theUrl, true); // true for asynchronous 
     xmlHttp.send(null);
 }
 var x;
 
-function processhttp(responseText){
+function processhttp(responseText,string){
 	// console.log(responseText);
 	x = JSON.parse(responseText);
-	console.log(current);
-	if (current == "destination") {
+	console.log(string);
+	if (string == "destination") {
 		destination_laditude = x.results[0].geometry.location.lat;
 		destination_longitude = x.results[0].geometry.location.lng;
-		savedata();
+		savedata(string);
 	}else{
 		depart_laditude = x.results[0].geometry.location.lat;
 		depart_longitude = x.results[0].geometry.location.lng;
-
+		savedata(string);
 	}
 }
 
-function savedata(){
+function savedata(string){
 	console.log("enter savedata()");
-	if(current == "destination"){
+	if(string == "destination"){
     	document.getElementById("destination_lat_input").value = destination_laditude;
     	document.getElementById("destination_lng_input").value = destination_longitude;
-    	submitdata();
+    	// submitdata();
 	}else{
     	document.getElementById("depart_lat_input").value = depart_laditude;
        	document.getElementById("depart_lng_input").value = depart_longitude;
-       	submitdata();
+       	// submitdata();
 	}
 }
 
@@ -80,17 +80,17 @@ function submitdata(){
 	//     }
 	//   });
 	// });
-	$(function(){
-		$.ajax({
-		     url: 'index.php', //This is the current doc
-		     type: "POST",
-		     dataType:'json', // add json datatype to get json
-		     data: ({"destination_laditude" : destination_laditude }),
-		     success: function(data){
-		         console.log(data);
-		     }
-		});  
-	});
+	// $(function(){
+	// 	$.ajax({
+	// 	     url: 'index.php', //This is the current doc
+	// 	     type: "POST",
+	// 	     dataType:'json', // add json datatype to get json
+	// 	     data: ({"destination_laditude" : destination_laditude }),
+	// 	     success: function(data){
+	// 	         console.log(data);
+	// 	     }
+	// 	});  
+	// });
 
 	// console.log(document.getElementById('transfer'));
 	// $('#transfer').submit(function(event)

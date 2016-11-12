@@ -8,15 +8,12 @@
 	</head>
 
 	<body>
-		<?php
-			$command = escapeshellcmd('python py/functions.py');
-			$output = shell_exec($command);
-		?>
+
 	<a href="."><img src="../pictures/iconFull.png" id="icon"></a>
 	<a href="../pages/about.html" target="_blank"><img id="help" src="../pictures/iconAbout.png"></a>
 	<div id="history"><br></div>
-	<div id="switchButtonLeft"><img src="../pictures/arrowLeft.png"></div>
-	<div id="switchButtonRight"><img src="../pictures/arrowRight.png"></div>
+	<div id="switchButtonLeft"><img src="#"></div>
+	<div id="switchButtonRight"><img src="#"></div>
 	<div id="destination">
 		<div id="destinationPrompt">Where would you like to go?</div>
 			<input type="text" id="destinationInput">
@@ -40,7 +37,8 @@
 
 <?php
 	
-	
+	// $key = "<script type=text/javascript> document.write(destination_laditude) </script>";
+	// echo "<h>". $key ."</h>"; 
  	// $sql="SELECT * FROM <tablename> where color='".$userAnswer."'" ;
  	// $result=mysql_query($sql);
  	// $row=mysql_fetch_array($result);
@@ -48,11 +46,28 @@
  	// echo json_encode($row);  // pass array in json_encode  
 
 
-	if(isset($_POST['destination_laditude']))
+	if(isset($_POST['destination_lat_input']))
 	{
-	    $uid = $_POST['destination_laditude'];
-	    echo "<h>". $uid ."</h>";
+	    $destination_lat_input = $_POST['destination_lat_input'];
+	    
+	    $destination_lng_input = $_POST['destination_lng_input'];
+
+	    $depart_lat_input = $_POST['depart_lat_input'];
+
+	    $depart_lng_input = $_POST['depart_lng_input'];
+
+	    // echo "<h>". $destination_lat_input.  $destination_lng_input . $depart_lat_input . $depart_lng_input  ."</h>";
 	    // Do whatever you want with the $uid
+	    $data = array($destination_lat_input, $destination_lng_input, $depart_lat_input, $depart_lng_input);
+	    $result = shell_exec('python py/maps.py ' . escapeshellarg(json_encode($data)));
+	    print $result;
+	    $resultData = json_decode($result, true);
+	  	// var_dump($resultData);
+
+	  	$data = array($resultData[0]);
+	    $result = shell_exec('python py/functions.py ' . escapeshellarg(json_encode($data)));
+	    // $resultData = json_decode($result, true);
+	    echo $result;
 	}
 
 ?>
