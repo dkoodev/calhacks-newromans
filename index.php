@@ -16,8 +16,8 @@
 	<div id="destination">
 		<div id="destinationPrompt">Where would you like to go?</div>
 			<!-- <input type="text" id="destinationInput" placeholder="E.g. New York City"> -->
-
-			<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+			<input id="pac-input" class="controls" type="text"
+			        placeholder="Enter a location">
 
 			<div id="destinationButton">Go</div>
 		</div>
