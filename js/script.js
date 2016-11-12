@@ -16,7 +16,7 @@ var locations = ["E.g. Grand Canyon, United States"
 , "E.g. Anahola, United States"
 , "E.g. Lake Sinclair, United States"
 , "E.g. Alberta, Canada"
-, "E.g. Tahoe, United States"]
+, "E.g. Shawnee Mountain, United States"]
 
 var curr_loc = locations[index_copy];
 document.getElementById('destinationInput').placeholder = curr_loc;

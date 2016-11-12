@@ -24,7 +24,7 @@
     <div id="map"></div>
     <div id="confirmation"><div id="confirmationButton">Confirm</div></div>
     <div id="tester"> </div> 
-    <footer>Travelyzer &copy 2016 | Powered by Amadeus, Google, and Plotly</footer>
+    <footer>Travelyzer &copy 2016 | Powered by <a href="https://developers.amadeus.com/">Amadeus</a>, <a href="https://developers.google.com/">Google</a>, and <a href="https://plot.ly/">Plotly</a></footer>
 	</body>
 
 <script src="js/plotly-latest.min.js"></script>
