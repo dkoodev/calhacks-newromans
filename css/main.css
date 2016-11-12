@@ -4,10 +4,29 @@ body {
 	background-attachment: fixed;
 }
 
+#destination {
+	padding-top: 15%;
+	width: 60%;
+	margin: auto;
+}
+
+#destination input {
+	width: 80%;
+	margin: auto;
+	font-size: 50px;
+	padding-right: 10%;
+}
+
+#destination button {
+	font-size: 50px;
+}
+
 #map {
+	display: none;
 	max-width: 500px;
 	max-height: 200px;
 	width: auto;
 	height: auto;
-	margin: 15% auto;
+	margin: auto;
+	padding-top: 15%;
 }

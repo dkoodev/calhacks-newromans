@@ -8,6 +8,7 @@
 	</head>
 
 	<body>
+	<div id="destination"><input type="text" name="destination"><button>Go</button></div>
     <div id="map"></div>
 	</body>
 
