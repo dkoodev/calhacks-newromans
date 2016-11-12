@@ -1,0 +1,29 @@
+body {
+	background-image: url('../pictures/0.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: Satisfy;
+}
+
+@font-face {
+	font-family: Satisfy;
+	src: url('../fonts/Satisfy-Regular.ttf');
+}
+
+@font-face {
+	font-family: Bitter;
+	src: url('../fonts/Bitter-Regular.otf');
+}
+
+#header {
+	text-align: center;
+	font-size: 75px;
+	padding-top: 3%;
+}
+
+#info {
+	width: 75%;
+	padding-top: 3%;
+	margin: auto;
+	font-family: Bitter;
+}
