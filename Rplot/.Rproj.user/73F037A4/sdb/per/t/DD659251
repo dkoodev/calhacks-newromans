@@ -1,0 +1,18 @@
+{
+    "contents" : "library(plotly)\n\nx <- c(1:100)\nrandom_y <- rnorm(100, mean = 0)\ndata <- data.frame(x, random_y)\n\np <- plot_ly(data, x = ~x, y = ~random_y, type = 'scatter', mode = 'lines')\n\n# Create a shareable link to your chart\n# Set up API credentials: https://plot.ly/r/getting-started\nchart_link = plotly_POST(p, filename=\"line/basic\")\nchart_link\n\n",
+    "created" : 1478943863773.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "393227708",
+    "id" : "DD659251",
+    "lastKnownWriteTime" : 1478944630,
+    "path" : "C:/calhacks-newromans/Rplot/test.r",
+    "project_path" : "test.r",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
