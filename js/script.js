@@ -2,7 +2,7 @@ var destination;
 var start;
 
 
-var index = Math.floor(Math.random() * 10);
+var index = Math.floor(Math.random() *19);
 var index_copy = index;
 index = 'url(../pictures/' + index + '.jpg)';
 document.body.style.backgroundImage = index;
@@ -16,7 +16,16 @@ var locations = ["E.g. Grand Canyon, United States"
 , "E.g. Anahola, United States"
 , "E.g. Glacier National Park, United States"
 , "E.g. Alberta, Canada"
-, "E.g. Shawnee Mountain, United States"]
+, "E.g. Shawnee Mountain, United States"
+, "E.g. La Fortuna, Costa Rica"
+, "E.g. Desert Safari, Dubai"
+, "E.g. Taipei, Taiwan"
+, "E.g. Mexico Beach, United State"
+, "E.g. Trier, Germany"
+, "E.g. Halsingland, Sweden"
+, "E.g. Yosemite, United States"
+, "E.g. Jarrettsville, United States"
+, "E.g. Arc de Triomphe, France"]
 
 var curr_loc = locations[index_copy];
 document.getElementById('destinationInput').placeholder = curr_loc;
@@ -32,7 +41,7 @@ document.getElementById('destinationButton').addEventListener('click', function(
 
 document.getElementById('switchButtonLeft').addEventListener('click', function() {
 	if(index_copy == 0) {
-		index_copy = 9;
+		index_copy = 18;
 	}
 	else {
 		index_copy--;
@@ -44,7 +53,7 @@ document.getElementById('switchButtonLeft').addEventListener('click', function()
 });
 
 document.getElementById('switchButtonRight').addEventListener('click', function() {
-	if(index_copy == 9) {
+	if(index_copy == 18) {
 		index_copy = 0;
 	}
 	else {
