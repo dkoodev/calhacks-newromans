@@ -31,6 +31,7 @@
 <script type="text/javascript" src="js/plot.js"></script>
 <script type="text/javascript" src="js/script.js" ></script>
 <script type="text/javascript" src="js/airport.js" ></script>
-<script type="text/javascript" src="js/google-maps.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaopJNj_frN6fwXANNEKsK6LByLqdaZIA&libraries=places&callback=initAutocomplete"async defer></script>
+<script type="text/javascript" src="js/google-maps.js"></script>
+
 </html>
