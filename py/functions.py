@@ -47,16 +47,16 @@ for x in xrange(0,num_range):
 # print(data_dict)
 double_list=[]
 for x in range(0, num_range):
-	double_list.append([departure_date_arr[x],price_arr[x]])
+	double_list.append([departure_date_arr[x],price_arr[x],airline_arr[x]])
 double_list = sorted(double_list)
 
 f = open("resources/output.csv" , "wt")
 
 try: 
 	writer = csv.writer(f)
-	writer.writerow(('Departure Date','Price'))
+	writer.writerow(('Departure Date','Price','Airline'))
 	for i in range(num_range):
-		writer.writerow((double_list[i][0],double_list[i][1]))
+		writer.writerow((double_list[i][0],double_list[i][1],double_list[i][2]))
 finally:
 	f.close()
 
