@@ -23,23 +23,27 @@ var selectorOptions = {
     }],
 };
 
-Plotly.d3.csv(rawDataURL, function(err, rawData) {
-    if(err) throw err;
+document.getElementById('startButton').addEventListener('click', function() {
+    Plotly.d3.csv(rawDataURL, function(err, rawData) {
+        if(err) throw err;
 
-    var data = prepData(rawData);
-    var layout = {
-        xaxis: {
-            rangeselector: selectorOptions,
-            rangeslider: {}
-        },
-        yaxis: {
-            title: 'Price',
-            fixedrange: true
-        }
-    };
+        var data = prepData(rawData);
+        var layout = {
+            xaxis: {
+                rangeselector: selectorOptions,
+                rangeslider: {}
+            },
+            yaxis: {
+                title: 'Price',
+                fixedrange: true
+            }
+        };
 
-    Plotly.plot(document.getElementById('tester'), data, layout);
+        Plotly.plot(document.getElementById('tester'), data, layout);
+    });
+
 });
+
 
 function prepData(rawData) {
     var x = [];

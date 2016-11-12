@@ -18,9 +18,11 @@ document.getElementById('startButton').addEventListener('click', function() {
 	start = document.getElementById('startInput').value;
 	document.getElementById('history').innerHTML += ",  from " + start;
 	document.getElementById('map').style.display = "block";
+	
 });
 
 var map = "https://maps.googleapis.com/maps/api/staticmap?center=" + "University of Southern California" + "&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7Clabel:A%7CUniversity of Southern California&key=AIzaSyCaopJNj_frN6fwXANNEKsK6LByLqdaZIA"
 var x = document.createElement("img");
 x.setAttribute("src", map);
 document.getElementById('map').appendChild(x);
+
