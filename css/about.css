@@ -18,12 +18,15 @@ body {
 #header {
 	text-align: center;
 	font-size: 75px;
-	padding-top: 3%;
+	padding: 2% 0;
 }
 
 #info {
+	background-color: white;
+	border-radius: 5px;
+	padding: 3%;
 	width: 75%;
-	padding-top: 3%;
 	margin: auto;
 	font-family: Bitter;
+	font-size: 25px;
 }
