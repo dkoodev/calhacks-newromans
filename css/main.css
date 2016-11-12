@@ -1,5 +1,5 @@
 body {
-	background-image: url('../pictures/1.jpg');
+	background-image: url('../pictures/2.jpg');
 	background-size: cover;
 	background-attachment: fixed;
 	font-family: Satisfy;
@@ -73,6 +73,12 @@ body {
 	border-radius: 5px;
 }
 
+#destinationButton:hover {
+	cursor: pointer;
+	background-color: gray;
+	color: white;
+}
+
 #start {
 	display: none;
 	animation-name: fadeIn;
@@ -107,6 +113,12 @@ body {
 	padding: 15px;
 	background-color: white;
 	border-radius: 5px;
+}
+
+#startButton:hover {
+	cursor: pointer;
+	background-color: gray;
+	color: white;
 }
 
 #map {
