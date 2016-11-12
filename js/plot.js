@@ -38,11 +38,18 @@ document.getElementById('confirmationButton').addEventListener('click', function
                 title: 'Price',
                 fixedrange: true
             },
-            paper_bgcolor: "rgba0,0,0,0)",
-            plot_bgcolor: "rgb(0,0,0,0)"
+            paper_bgcolor: "rgba(255,255,255,0.7)",
+            plot_bgcolor: "rgba(255,255,255,0.3)",
+            margin: {
+                b: 30,
+                l: 90,
+                r: 60,
+                t: 70
+            }
         };
 
-        Plotly.plot(document.getElementById('tester'), data, layout);
+        Plotly.plot(document.getElementById('tester'), data, layout
+             ,{displayModeBar: false});
     });
 
 });
