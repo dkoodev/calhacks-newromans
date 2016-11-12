@@ -9,7 +9,7 @@
 			$output = shell_exec($command);
 			echo $output;
 
-			$resultData = json_decode($result, true);
+			$resultData = json_decode($output, true);
 
 			var_dump($resultData); 
 		?>

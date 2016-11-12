@@ -7,9 +7,7 @@ current_year = time.strftime("%Y")
 current_month = time.strftime("%m")
 current_year_month = current_year + "-" + current_month
 
-# future_year = int(current_year) + 1
-# future_month = int(current_month) - 1
-# future_year_month = str(future_year) + "-" + str(future_month)
+
 
 print (current_year_month)
 print (current_year_month)
@@ -26,12 +24,13 @@ r = requests.get(x)
 data = json.loads(r.content)
 # print data
 
-
+# THESE ARE THE ARRAYS THAT YOU NEED
 num_range = len(data['points_of_interest'])
-attractions = range(num_range)
-description = range(num_range)
-pictures = range(num_range)
-grade = range(num_range)
+attractions = range(num_range) #NAMES OF THE ATTRACTION
+description = range(num_range) #DESCRIPTIONS OF THE ATTRACTION
+pictures = range(num_range) #9 INSTAGRAM PHOTOS
+grade = range(num_range) # DON'T NEED THIS
+
 # pictures2d = range(num_range)
 # index = range(num_range)
 # full_attract = []
