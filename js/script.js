@@ -32,7 +32,7 @@ document.getElementById('destinationButton').addEventListener('click', function(
 
 document.getElementById('switchButtonLeft').addEventListener('click', function() {
 	if(index_copy == 0) {
-		index_copy == 9;
+		index_copy = 9;
 	}
 	else {
 		index_copy--;
@@ -45,7 +45,7 @@ document.getElementById('switchButtonLeft').addEventListener('click', function()
 
 document.getElementById('switchButtonRight').addEventListener('click', function() {
 	if(index_copy == 9) {
-		index_copy == 0;
+		index_copy = 0;
 	}
 	else {
 		index_copy++;
