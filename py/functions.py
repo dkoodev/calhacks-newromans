@@ -1,6 +1,7 @@
 
 import requests
 import json
+import csv
 
 
 origin = "NYC"
@@ -35,6 +36,22 @@ for x in xrange(0,num_range):
 	print "--------"
 
 
+f = open("resources/output.csv" , "wt")
+
+try: 
+	writer = csv.writer(f)
+	writer.writerow(('Departure Date','Price'))
+	for i in range(num_range):
+		writer.writerow((departure_date_arr[i],price_arr[i]))
+finally:
+	f.close()
+
+# city_name = "Los Angeles"
+# x = "https://api.sandbox.amadeus.com/v1.2/points-of-interest/yapq-search-text?apikey=4wpDaou92avrjAGMVdGDb5Wl5XgGzCGW&city_name="+ city_name +"&social_media=true HTTP/1.1"
+# r = requests.get(x)
+# data = json.loads(r.content)
+
+# print r.content
 
 
 
