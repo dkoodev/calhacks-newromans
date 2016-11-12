@@ -20,8 +20,8 @@ body {
 }
 
 #icon {
-	width: 45px;
-	height: 45px;
+	width: 55px;
+	height: 55px;
 	padding-left: 1%;
 	padding-top: 1%;
 }
@@ -35,7 +35,6 @@ body {
 	animation-name: fadeIn;
 	animation-duration: 2s;
 	font-size: 25px;
-	padding-top: 2%;
 	color: black;
 	text-align: center;
 }
