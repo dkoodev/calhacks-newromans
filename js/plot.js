@@ -1,6 +1,7 @@
 var rawDataURL = '../resources/output.csv';
 var xField = 'Departure Date';
 var yField = 'Price';
+var extrainfo = 'Airline';
 
 var selectorOptions = {
     buttons: [{
@@ -48,14 +49,17 @@ document.getElementById('startButton').addEventListener('click', function() {
 function prepData(rawData) {
     var x = [];
     var y = [];
-
+    var info = []
     rawData.forEach(function(datum, i) {
 
         x.push(new Date(datum[xField]));
         y.push(datum[yField]);
+        info.push(datum[extrainfo]);
     });
 
     return [{
+        text: info,
+        hoverinfo: "y+text",
         mode: 'lines',
         x: x,
         y: y
