@@ -1,9 +1,12 @@
 <html>
+	<head>
+		
+	</head>
 
-<body>
-<?php
-	echo " hello";
-?>
+	<body>
+		<?php
+			echo "php is working";
+		?>
+	</body>
 
-</body>
 </html>
