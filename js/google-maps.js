@@ -19,6 +19,8 @@
           map: map,
           anchorPoint: new google.maps.Point(0, -29)
         });
+        map.setOptions({draggable: false});
+
 
         autocomplete.addListener('place_changed', function() {
           infowindow.close();
