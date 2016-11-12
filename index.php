@@ -15,6 +15,8 @@
 	<a href="."><img src="../pictures/iconFull.png" id="icon"></a>
 	<a href="../pages/about.html" target="_blank"><img id="help" src="../pictures/iconAbout.png"></a>
 	<div id="history"><br></div>
+	<div id="switchButtonLeft"><img src="#"></div>
+	<div id="switchButtonRight"><img src="#"></div>
 	<div id="destination">
 		<div id="destinationPrompt">Where would you like to go?</div>
 			<input type="text" id="destinationInput">

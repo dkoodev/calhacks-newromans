@@ -30,6 +30,32 @@ document.getElementById('destinationButton').addEventListener('click', function(
 });
 
 
+document.getElementById('switchButtonLeft').addEventListener('click', function() {
+	if(index_copy == 0) {
+		index_copy == 9;
+	}
+	else {
+		index_copy--;
+	}
+	index = 'url(../pictures/' + index_copy + '.jpg)';
+	document.body.style.backgroundImage = index;
+	var curr_loc = locations[index_copy];
+	document.getElementById('destinationInput').placeholder = curr_loc;
+});
+
+document.getElementById('switchButtonRight').addEventListener('click', function() {
+	if(index_copy == 9) {
+		index_copy == 0;
+	}
+	else {
+		index_copy++;
+	}
+	index = 'url(../pictures/' + index_copy + '.jpg)';
+	document.body.style.backgroundImage = index;
+	var curr_loc = locations[index_copy];
+	document.getElementById('destinationInput').placeholder = curr_loc;
+});
+
 
 document.getElementById('startButton').addEventListener('click', function() {
 	document.getElementById('start').style.display = "none";
