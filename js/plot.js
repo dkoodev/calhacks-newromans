@@ -63,7 +63,7 @@ function prepData(rawData) {
 
     return [{
         text: info,
-        hoverinfo: "y+text",
+        hoverinfo: "x+y+text",
         mode: 'lines',
         x: x,
         y: y
