@@ -1,6 +1,7 @@
 var destination;
 var start;
 
+
 var index = Math.floor(Math.random() * 10);
 var index_copy = index;
 index = 'url(../pictures/' + index + '.jpg)';
