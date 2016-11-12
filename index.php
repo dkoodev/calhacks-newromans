@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/google-maps.css">
 
-		<title>Travelyze</title>
+		<title> Travelyze</title>
 	</head>
 
 	<body>
@@ -24,6 +24,7 @@
     <div id="map"></div>
     <div id="confirmation"><div id="confirmationButton">Confirm</div></div>
     <div id="tester"> </div> 
+    <footer>Travelyzer &copy 2016 | Powered by Amadeus, Google, and Plotly</footer>
 	</body>
 
 <script src="js/plotly-latest.min.js"></script>
