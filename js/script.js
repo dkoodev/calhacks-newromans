@@ -21,7 +21,7 @@ document.getElementById('startButton').addEventListener('click', function() {
 	
 });
 
-var map = "https://maps.googleapis.com/maps/api/staticmap?center=" + "University of Southern California" + "&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7Clabel:A%7CUniversity of Southern California&key=AIzaSyCaopJNj_frN6fwXANNEKsK6LByLqdaZIA"
+var map = "https://maps.googleapis.com/maps/api/staticmap?center=" + destination + "&zoom=5&size=600x300&maptype=roadmap&markers=color:red%7Clabel:A%7C" + start + "&markers=color:red%7Clabel:B%7C" + destination + "&key=AIzaSyCaopJNj_frN6fwXANNEKsK6LByLqdaZIA"
 var x = document.createElement("img");
 x.setAttribute("src", map);
 document.getElementById('map').appendChild(x);
