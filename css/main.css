@@ -6,18 +6,8 @@ body {
 }
 
 @font-face {
-	font-family: Seaweed;
-	src: url('../fonts/SeaweedScript-Regular.ttf');
-}
-
-@font-face {
 	font-family: Satisfy;
 	src: url('../fonts/Satisfy-Regular.ttf');
-}
-
-@font-face {
-	font-family: Merriwether;
-	src: url('../fonts/MerriwetherSans-Regular.ttf');
 }
 
 @font-face {
