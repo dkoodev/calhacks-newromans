@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/google-maps.css">
 
-		<title>Travel App</title>
+		<title>Travelyze</title>
 	</head>
 
 	<body>
@@ -15,9 +15,8 @@
 	<div id="history"><br></div>
 	<div id="destination">
 		<div id="destinationPrompt">Where would you like to go?</div>
-			<!-- <input type="text" id="destinationInput" placeholder="E.g. New York City"> -->
-			<input id="pac-input" class="controls" type="text"
-			        placeholder="Enter a location">
+			<input type="text" id="destinationInput">
+    		<div id="map"></div>
 
 			<div id="destinationButton">Go</div>
 		</div>
@@ -31,5 +30,6 @@
 <script type="text/javascript" src="js/script.js" ></script>
 <script type="text/javascript" src="js/google-maps.js"></script>
 <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaopJNj_frN6fwXANNEKsK6LByLqdaZIA&libraries=places&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaopJNj_frN6fwXANNEKsK6LByLqdaZIA&libraries=places&callback=initAutocomplete"
+         async defer></script>
 </html>
