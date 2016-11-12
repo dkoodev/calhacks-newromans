@@ -75,4 +75,3 @@
           map.fitBounds(bounds);
         });
       }
-initAutocomplete();
