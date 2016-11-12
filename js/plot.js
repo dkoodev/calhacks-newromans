@@ -38,8 +38,8 @@ document.getElementById('confirmationButton').addEventListener('click', function
                 title: 'Price',
                 fixedrange: true
             },
-            paper_bgcolor: "rgb(0,0,0,0)",
-            plot_bgcolor: "rgb(0,0,0,0)"
+            paper_bgcolor: "rgb(0,0,0,0.5)",
+            plot_bgcolor: "rgb(0,0,0,0.5)"
         };
 
         Plotly.plot(document.getElementById('tester'), data, layout);
