@@ -12,7 +12,7 @@
 			$command = escapeshellcmd('python py/functions.py');
 			$output = shell_exec($command);
 		?>
-	<a href="."><img src="../pictures/icon.png" id="icon"></a>
+	<a href="."><img src="../pictures/iconFull.png" id="icon"></a>
 	<a href="../pages/about.html" target="_blank"><img id="help" src="../pictures/iconAbout.png"></a>
 	<div id="history"><br></div>
 	<div id="destination">
