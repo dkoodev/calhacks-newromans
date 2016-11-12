@@ -1,7 +1,7 @@
-var destination_laditude =1;
-var destination_longitude =1;
-var depart_laditude =2;
-var depart_longitude=2;
+var destination_laditude =0;
+var destination_longitude =0;
+var depart_laditude =0;
+var depart_longitude=0;
 var destination_name;
 var depart_name;
 var destination_airport;
@@ -11,11 +11,8 @@ var current;
 document.getElementById('confirmationButton').addEventListener('click',function(){
 	console.log("confirmation button pressed");
 	createURL(destination_name, 'destination');
-
-  	// createURL(depart_name,'depart');
+  	createURL(depart_name,'depart');
 })
-
-
 
 function createURL(addr,str){
 	for (var i = 0; i < addr.length; i++) {
@@ -48,118 +45,75 @@ function processhttp(responseText){
 	if (current == "destination") {
 		destination_laditude = x.results[0].geometry.location.lat;
 		destination_longitude = x.results[0].geometry.location.lng;
-		  document.write(' <?php php_function(); ?> ');
-		  initialize();
-		
-		// url_destination_airport = "https://airport.api.aero/airport/nearest/"+ destination_laditude +"/"+ destination_longitude +"?user_key=45b3bb10d31577c7893b56a0eeb007fe";
-		// console.log("right before windoww change");
-		// window.location.href = "index.php?w1=" + url_destination_airport;
-
+		savedata();
 	}else{
 		depart_laditude = x.results[0].geometry.location.lat;
 		depart_longitude = x.results[0].geometry.location.lng;
-		// url_depart_airport = "https://airport.api.aero/airport/nearest/"+depart_laditude+"/"+depart_longitude+"?user_key=45b3bb10d31577c7893b56a0eeb007fe";
-		// httpGetAsync(url_depart_airport,processairporthttp,"depart");
 
 	}
 }
 
-
-
-
-function processairporthttp(airportinfo){
-	console.log("processairporthttp reached");
-	parsed_airport_info = JSON.parse(airportinfo);
+function savedata(){
+	console.log("enter savedata()");
 	if(current == "destination"){
-		destination_airport = parsed_airport_info.airports.code;
-		console.log(destination_airport);
+    	document.getElementById("destination_lat_input").value = destination_laditude;
+    	document.getElementById("destination_lng_input").value = destination_longitude;
+    	submitdata();
 	}else{
-		depart_airport = parsed_airport_info.airports.code;
-		console.log(depart_airport);
+    	document.getElementById("depart_lat_input").value = depart_laditude;
+       	document.getElementById("depart_lng_input").value = depart_longitude;
+       	submitdata();
 	}
-
 }
 
-var map;
-var service;
-var infowindow;
+function submitdata(){
+	console.log("submitdata");
 
-function initialize() {
-  var pyrmont = new google.maps.LatLng(destination_laditude,destination_longitude);
+	// data: { "destination_laditude" : destination_laditude };
+	// $(function(){
+	//   $.ajax({
+	//     type: "POST",
+	//     url: 'index.php',
+	//     data: ({"destination_laditude" : destination_laditude }),
+	//     success: function(data) {
+	//       // alert(data);
+	//     }
+	//   });
+	// });
+	$(function(){
+		$.ajax({
+		     url: 'index.php', //This is the current doc
+		     type: "POST",
+		     dataType:'json', // add json datatype to get json
+		     data: ({"destination_laditude" : destination_laditude }),
+		     success: function(data){
+		         console.log(data);
+		     }
+		});  
+	});
 
-  map = new google.maps.Map(document.getElementById('map'), {
-      center: pyrmont,
-      zoom: 15
-    });
+	// console.log(document.getElementById('transfer'));
+	// $('#transfer').submit(function(event)
+	// {
+	//   alert("abc");
 
-  var request = {
-    location: pyrmont,
-    radius: '500',
-    types: ['airport']
-  };
-
-  service = new google.maps.places.PlacesService(map);
-  service.nearbySearch(request, callback);
+	// });
+	// document.getElementById('transfer').submit();
+	// document.getElementById('transfer').on( "submit", handler )
 }
 
-function callback(results, status) {
-  if (status == google.maps.places.PlacesServiceStatus.OK) {
-    for (var i = 0; i < results.length; i++) {
-      var place = results[i];
-      console.log(results[i]);
-    }
-  }
-}
 
-// var map;
-// var service;
-// var infowindow;
+// function processairporthttp(airportinfo){
+// 	console.log("processairporthttp reached");
+// 	parsed_airport_info = JSON.parse(airportinfo);
+// 	if(current == "destination"){
+// 		destination_airport = parsed_airport_info.airports.code;
+// 		console.log(destination_airport);
+// 	}else{
+// 		depart_airport = parsed_airport_info.airports.code;
+// 		console.log(depart_airport);
+// 	}
 
-// function initialize_destination() {
-// 	console.log("initialize_destination");
-// 	console.log(destination_laditude);
-// 	console.log(destination_longitude);
-
-// 	google_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +destination_laditude + "," + destination_longitude + "&radius=500&type=airport&key=AIzaSyCaopJNj_frN6fwXANNEKsK6LByLqdaZIA"
-  	
-
-// 	 httpGetAsync(google_url, process_google_url, 'destination');
-
-
-//   // var place = new google.maps.LatLng(destination_laditude,destination_longitude);
-
-//   // map = new google.maps.Map(document.getElementById('map'), {
-//   //           center: place,
-//   //           zoom: 15
-//   //         });
-
-//   // infowindow = new google.maps.InfoWindow();
-//   // var service = new google.maps.places.PlacesService(map);
-//   // service.nearbySearch({
-//   //   location: place,
-//   //   radius: 500,
-//   //   type: ['airport']
-//   // }, callback);
-
-// }
-// function process_google_url(placeinfo){
-// 	console.log(placeinfo);
-// }
-
-
-// function callback(results, status) {
-// 	// console.log("callback reached");
-//  //      var airport_location = results[1];
-//  //      console.log(airport_location);
-//  //  if (status == google.maps.places.PlacesServiceStatus.OK) {
-//  //      var airport_location = results[0];
-//  //      console.log(airport_location);
-//  //    }
-//     if (status === google.maps.places.PlacesServiceStatus.OK) {
-//       for (var i = 0; i < results.length; i++) {
-//         console.log(results[i]);
-//       }
-//     }
 // }
 
 

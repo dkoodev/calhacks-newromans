@@ -66,8 +66,13 @@ document.getElementById('startButton').addEventListener('click', function() {
 	var x = document.createElement("img");
 	x.setAttribute("src", map);
 	document.getElementById('confirmation').appendChild(x);	
+	createURL(depart_name,"depart");
+    createURL(destination_name,"destination");
+
 });
 
 document.getElementById('confirmationButton').addEventListener('click', function() {
 	document.getElementById('confirmation').style.display = "none";
+
+
 });
