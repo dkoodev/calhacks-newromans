@@ -26,6 +26,10 @@ body {
 	padding-top: 1%;
 }
 
+#icon:hover {
+	opacity: 0.6;
+}
+
 #history {
 	font-family: Bitter;
 	animation-name: fadeIn;
@@ -131,14 +135,16 @@ body {
 
 #confirmation  {
 	display: none;
-	width: 100%;
+	width: 50%;
 	margin: auto;
+	background-color: white;
+	border-radius: 5px;
 }
 
 #confirmation img {
-	padding-top: 4%;
-	width: 40%;
-	margin: 0 30%;
+	width: 80%;
+	margin: 3% 10%;
+	border-radius: 5px;
 }
 
 #confirmationButton {
@@ -156,4 +162,10 @@ body {
 	cursor: pointer;
 	background-color: gray;
 	color: white;
+}
+
+#tester {
+	padding-top: 2%;
+	width: 80%;
+	margin: auto;
 }
