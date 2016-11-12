@@ -18,7 +18,7 @@ var selectorOptions = {
         step: 'year',
         stepmode: 'backward',
         count: 1,
-        label: '1 year'
+        label: '1 Year'
     }, {
         step: 'all',
     }],
