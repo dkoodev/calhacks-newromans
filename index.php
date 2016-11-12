@@ -8,7 +8,9 @@
 	</head>
 
 	<body>
-	<div id="destination"><input type="text" name="destination"><button>Go</button></div>
+	<div id="history"><br></div>
+	<div id="destination"><div id="destinationPrompt">Where would you like to go?</div><input type="text" id="destinationInput" placeholder="E.g. New York City"><div id="destinationButton">Go</div></div>
+	<div id="start"><div id="startPrompt">Where are you starting from?</div><input type="text" id="startInput" placeholder="E.g. University of Southern California"><div id="startButton">Go</div></div>
     <div id="map"></div>
 	</body>
 
