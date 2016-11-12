@@ -2,17 +2,24 @@
 import requests
 import json
 import csv
+import time
 
+current_year = time.strftime("%Y")
+current_month = time.strftime("%m")
+current_year_month = current_year + "-" + current_month
+
+future_year = int(current_year) + 1
+future_month = int(current_month) - 1
+future_year_month = str(future_year) + "-" + str(future_month)
+
+print(current_year_month)
+print(future_year_month)
 
 origin = "NYC"
 destination = "LAS"
-departure_date = "2016-12--2017-01"
+departure_date = current_year_month + "--" + future_year_month
+# print departure_date
 x = "http://api.sandbox.amadeus.com/v1.2/flights/extensive-search?origin="+ origin + "&destination="+ destination + "&departure_date=" + departure_date + "&duration=2--3&apikey=4wpDaou92avrjAGMVdGDb5Wl5XgGzCGW" 
-
-# url_response = urllib2.urlopen(x)
-
-
-# print (url_response)
 
 
 r = requests.get(x)
@@ -23,18 +30,25 @@ num_range = len(data['results'])
 departure_date_arr = range(num_range)
 price_arr =  range(num_range)
 airline_arr = range(num_range)
+# data_dict = {}
 
 for x in xrange(0,num_range):
 	departure_date_arr.insert(x, data['results'][x]['departure_date'])
-	print departure_date_arr[x]
-	print ":::"
+	# print departure_date_arr[x]
+	# print ":::"
 	price_arr.insert(x,data['results'][x]['price'])
-	print price_arr[x]
-	print "....."
+	# print price_arr[x]
+	# print "....."
 	airline_arr.insert(x, data['results'][x]['airline'])
-	print airline_arr[x]
-	print "--------"
+	# print airline_arr[x]
+	# print "--------"
+	# data_dict= {data['results'][x]['departure_date']:data['results'][x]['price']}
 
+# print(data_dict)
+double_list=[]
+for x in range(0, num_range):
+	double_list.append([departure_date_arr[x],price_arr[x]])
+double_list = sorted(double_list)
 
 f = open("resources/output.csv" , "wt")
 
@@ -42,9 +56,24 @@ try:
 	writer = csv.writer(f)
 	writer.writerow(('Departure Date','Price'))
 	for i in range(num_range):
-		writer.writerow((departure_date_arr[i],price_arr[i]))
+		writer.writerow((double_list[i][0],double_list[i][1]))
 finally:
 	f.close()
+
+
+
+
+# f = open("resources/output.csv" , "wt")
+
+# try: 
+# 	writer = csv.writer(f)
+# 	writer.writerow(('Departure Date','Price'))
+# 	for i in range(num_range):
+# 		writer.writerow((departure_date_arr[i],price_arr[i]))
+# finally:
+# 	f.close()
+
+
 
 # city_name = "Los Angeles"
 # x = "https://api.sandbox.amadeus.com/v1.2/points-of-interest/yapq-search-text?apikey=4wpDaou92avrjAGMVdGDb5Wl5XgGzCGW&city_name="+ city_name +"&social_media=true HTTP/1.1"

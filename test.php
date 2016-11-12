@@ -7,7 +7,6 @@
 		<?php
 			$command = escapeshellcmd('python py/functions.py');
 			$output = shell_exec($command);
-			echo $output;
 		?>
 
 	</body>
