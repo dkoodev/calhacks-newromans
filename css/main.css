@@ -39,6 +39,7 @@ a:hover {
 	height: 72px;
 	padding-left: 1%;
 	padding-top: 1%;
+	opacity: 0.8;
 }
 
 #icon:hover {
@@ -51,6 +52,7 @@ a:hover {
 	float: right;
 	padding-right: 1%;
 	padding-top: 1%;
+	opacity: 0.8;
 }
 
 #help:hover {
