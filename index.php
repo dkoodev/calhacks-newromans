@@ -8,8 +8,6 @@
 	</head>
 
 	<body>
-    <input id="pac-input" class="controls" type="text"
-        placeholder="Enter a location">
     <div id="map"></div>
 	</body>
 

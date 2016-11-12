@@ -1,4 +1,13 @@
 body {
-	background-image: url('Pictures/1.jpg');
+	background-image: url('../pictures/1.jpg');
 	background-size: cover;
+	background-attachment: fixed;
+}
+
+#map {
+	max-width: 500px;
+	max-height: 200px;
+	width: auto;
+	height: auto;
+	margin: 15% auto;
 }
