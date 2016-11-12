@@ -51,10 +51,10 @@ function prepData(rawData) {
     var y = [];
     var info = [];
 
-    console.log(rawData.length)
+    //console.log(rawData.length)
 
     rawData.forEach(function(datum, i) {
-        if(i % 100) return;
+        //if(i % 100) return;
 
         x.push(new Date(datum[xField]));
         y.push(datum[yField]);
