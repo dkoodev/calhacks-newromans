@@ -98,7 +98,7 @@
 
 ?>
 <script src="js/jquery-3.1.1.js"></script>
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 <script src="js/plotly-latest.min.js"></script>
 <script type="text/javascript" src="js/plot.js"></script>
 <script type="text/javascript" src="js/script.js" ></script>
