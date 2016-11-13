@@ -231,7 +231,7 @@ a:hover {
 
 #tester {
 	padding-top: 2%;
-	width: 80%;
+	width: auto;
 	margin: auto;
 	opacity: 0.9;
 }

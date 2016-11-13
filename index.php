@@ -10,7 +10,7 @@
 	<body>
 
 	<a href="."><img src="../pictures/iconFull.png" id="icon"></a>
-	<a href="../pages/about.html" target="_blank"><img id="help" src="../pictures/iconAbout.png"></a>
+	<a href="../pages/about.html"><img id="help" src="../pictures/iconAbout.png"></a>
 	<div id="history"><br></div>
 	<div id="switchButtonLeft"><img src="../pictures/arrowLeft.png"></div>
 	<div id="switchButtonRight"><img src="../pictures/arrowRight.png"></div>
