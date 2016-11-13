@@ -32,7 +32,7 @@
 		<input id = "destination_longitude"> </input>
 		<input id = "depart_latitude"> </input>
 		<input id = "depart_longitude"> </input>
-		<input id = "submit"type="submit" value="submit" onclick="return chk()"> </input>
+		<input id = "submit" type="submit" value="Click here to see flight price information!" onclick="return chk()"> </input>
 
 	</form>
 	<p id="msg"> </p>

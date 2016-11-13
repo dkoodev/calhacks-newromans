@@ -20,7 +20,7 @@ var locations = ["E.g. Grand Canyon, United States"
 , "E.g. La Fortuna, Costa Rica"
 , "E.g. Desert Safari, Dubai"
 , "E.g. Taipei, Taiwan"
-, "E.g. Mexico Beach, United State"
+, "E.g. Mexico Beach, United States"
 , "E.g. Trier, Germany"
 , "E.g. Halsingland, Sweden"
 , "E.g. Yosemite, United States"
@@ -81,6 +81,10 @@ document.getElementById('startButton').addEventListener('click', function() {
 
 document.getElementById('confirmationButton').addEventListener('click', function() {
 	document.getElementById('confirmation').style.display = "none";
-	document.getElementById('tester').style.display = "block";
+	document.getElementById('submit').style.display = "block";
 
+});
+
+document.getElementById('submit').addEventListener('click', function() {
+	document.getElementById('submit').style.display = "none";
 });

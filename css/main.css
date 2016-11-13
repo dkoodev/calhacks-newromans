@@ -188,7 +188,7 @@ a:hover {
 #map {
 	display: none;
 	width: 50%;
-	margin: auto;
+	margin: 25%;
 	padding-top: 10%;
 }
 
@@ -197,18 +197,32 @@ a:hover {
 	margin: auto;
 }
 
-#confirmation  {
-	display: none;
-	width: 50%;
+#submit  {
 	margin: auto;
+	display: none;
+	font-family: Bitter;
+	font-size: 15px;
+	color: gray;
+	padding: 15px;
 	background-color: white;
 	border-radius: 5px;
+	border-style: none;
+}
+
+#submit:hover {
+	cursor: pointer;
+	background-color: gray;
+	color: white;
+}
+
+#confirmation {
+	width: 100%;
+	padding: auto;
 }
 
 #confirmation img {
-	width: 80%;
-	margin: 3% 10%;
-	border-radius: 5px;
+	padding-left: 28%;
+	padding-top: 2%;
 }
 
 #confirmationButton {
@@ -231,9 +245,25 @@ a:hover {
 
 #tester {
 	padding-top: 2%;
-	width: auto;
+	width: 90%;
 	margin: auto;
 	opacity: 0.9;
+}
+
+#destination_latitude {
+	display: none;
+}
+
+#destination_longitude {
+	display: none;
+}
+
+#depart_latitude {
+	display: none;
+}
+
+#depart_longitude {
+	display: none;
 }
 
 footer {
