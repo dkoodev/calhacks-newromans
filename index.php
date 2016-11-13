@@ -12,8 +12,8 @@
 	<a href="."><img src="../pictures/iconFull.png" id="icon"></a>
 	<a href="../pages/about.html" target="_blank"><img id="help" src="../pictures/iconAbout.png"></a>
 	<div id="history"><br></div>
-	<div id="switchButtonLeft"><img src="#"></div>
-	<div id="switchButtonRight"><img src="#"></div>
+	<div id="switchButtonLeft"><img src="../pictures/arrowLeft.png"></div>
+	<div id="switchButtonRight"><img src="../pictures/arrowRight.png"></div>
 	<div id="destination">
 		<div id="destinationPrompt">Where would you like to go?</div>
 			<input type="text" id="destinationInput">
@@ -22,16 +22,15 @@
 		</div>
 	<div id="start"><div id="startPrompt">Where are you starting from?</div><input type="text" id="startInput" placeholder="E.g. University of Southern California"><div id="startButton">Go</div></div>
     <div id="map"></div>
-    <div id="confirmation"><div id="confirmationButton">Confirm</div></div>
     <div id="tester"> </div> 
     <footer>Travelyze &copy 2016 | Powered by <a href="https://developers.amadeus.com/">Amadeus</a>, <a href="https://developers.google.com/">Google</a>, and <a href="https://plot.ly/">Plotly</a></footer>
 	</body>
 	<form id="transfer" name="transfer" method="post">
-    	<input id="destination_lat_input" name="destination_lat_input"></input>
+    	<div class="disappear"><input id="destination_lat_input" name="destination_lat_input"></input>
     	<input id="destination_lng_input" name="destination_lng_input"></input>
     	<input id="depart_lat_input" name="depart_lat_input"></input>
-    	<input id="depart_lng_input" name="depart_lng_input"></input>
-		<input name="submit" type="submit" >
+    	<input id="depart_lng_input" name="depart_lng_input"></input></div>
+		<input id="confirmationButton" name="submit" type="submit" value="Confirm">
 
 	</form>
 
