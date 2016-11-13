@@ -209,6 +209,11 @@ a:hover {
 	border-style: none;
 }
 
+.svg-container {
+	width: 50%;
+	margin: auto;
+}
+
 #submit:hover {
 	cursor: pointer;
 	background-color: gray;
