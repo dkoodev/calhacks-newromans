@@ -13,6 +13,7 @@ except:
     print "ERROR"
     sys.exit(1)
 
+print data
 
 
 current_year = time.strftime("%Y")
@@ -25,8 +26,7 @@ future_year_month = str(future_year) + "-" + str(future_month)
 
 # print(data[0]['depart_airport'])
 # print(data[1]['destination_airport'])
-print(data[0]['depart_airport'])
-print(data[1]['destination_airport'])
+
 origin = data[0]['depart_airport']
 destination = data[1]['destination_airport']
 departure_date = current_year_month + "--" + future_year_month

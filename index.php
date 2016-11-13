@@ -32,7 +32,7 @@
 		<input id = "destination_longitude"> </input>
 		<input id = "depart_latitude"> </input>
 		<input id = "depart_longitude"> </input>
-		<input type="submit" value="submit" onclick="return chk()"> </input>
+		<input id = "submit"type="submit" value="submit" onclick="return chk()"> </input>
 
 	</form>
 	<p id="msg"> </p>
@@ -62,9 +62,12 @@
 
 		echo $destination_latitude;
 		echo $destination_longitude;
-		echo $depart_latitude ;
-		echo $depart_longitude ;
+		echo $depart_latitude;
+		echo $depart_longitude;
 	  // }
+
+
+
 
 	  // if (isset($_GET['hello'])) {
 	  // 	sleep(5);
@@ -81,16 +84,16 @@
 
 	    // echo "<h>". $destination_lat_input.  $destination_lng_input . $depart_lat_input . $depart_lng_input  ."</h>";
 	    // Do whatever you want with the $uid
-	    $data = array($destination_lat_input, $destination_lng_input, $depart_lat_input, $depart_lng_input);
-	    $result = shell_exec('python py/maps.py ' . escapeshellarg(json_encode($data)));
-	    print $result;
-	    $resultData = json_decode($result, true);
-	  	// var_dump($resultData);
 
-	  	$data = array($resultData[0]);
-	    $result = shell_exec('python py/functions.py' . escapeshellarg(json_encode($data)));
+	    // $data = array($destination_lat_input, $destination_lng_input, $depart_lat_input, $depart_lng_input);
+	    // $result = shell_exec('python py/maps.py ' . escapeshellarg(json_encode($data)));
 	    // $resultData = json_decode($result, true);
-	    echo $result;
+	  	// var_dump($resultData);
+	    // echo "<h>" .$resultData."</h>";
+
+	    // $result = shell_exec('python py/functions.py' . escapeshellarg(json_encode($resultData)));
+	    // // $resultData = json_decode($result, true);
+	    // echo "<h>" .$result."</h>";
 
 
 ?>
