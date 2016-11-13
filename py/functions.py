@@ -13,6 +13,8 @@ except:
     print "ERROR"
     sys.exit(1)
 
+
+
 current_year = time.strftime("%Y")
 current_month = time.strftime("%m")
 current_year_month = current_year + "-" + current_month

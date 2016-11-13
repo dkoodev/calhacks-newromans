@@ -25,8 +25,17 @@
     <div id="map"></div>
     <div id="tester"> </div> 
     <footer>Travelyze &copy 2016 | Powered by <a href="https://developers.amadeus.com/">Amadeus</a>, <a href="https://developers.google.com/">Google</a>, and <a href="https://plot.ly/">Plotly</a></footer>
-	</body>
+	</body>	
 
+	<form>
+		<input id = "destination_latitude"> </input>
+		<input id = "destination_longitude"> </input>
+		<input id = "depart_latitude"> </input>
+		<input id = "depart_longitude"> </input>
+		<input type="submit" value="submit" onclick="return chk()"> </input>
+
+	</form>
+	<p id="msg"> </p>
 
 <?php
 	
@@ -37,17 +46,38 @@
  	// $row=mysql_fetch_array($result);
  	// for first row only and suppose table having data
  	// echo json_encode($row);  // pass array in json_encode  
+		
 
 
-	if(isset($_POST['destination_lat_input']))
-	{
-	    $destination_lat_input = $_POST['destination_lat_input'];
+	  // function get_value() {
+		// echo $_COOKIE["destination_laditude"];
+		// echo $_COOKIE["destination_longitude"];
+		// echo $_COOKIE["depart_laditude"];
+		// echo $_COOKIE["depart_longitude"];
+
+		$destination_latitude = $_POST['destination_latitude'];
+		$destination_longitude = $_POST['destination_longitude'];
+		$depart_latitude = $_POST['depart_latitude'];
+		$depart_longitude = $_POST['depart_longitude'];
+
+		echo $destination_latitude;
+		echo $destination_longitude;
+		echo $depart_latitude ;
+		echo $depart_longitude ;
+	  // }
+
+	  // if (isset($_GET['hello'])) {
+	  // 	sleep(5);
+	  //   get_value();
+	  // }
+
+	    // $destination_lat_input = $_POST['destination_lat_input'];
 	    
-	    $destination_lng_input = $_POST['destination_lng_input'];
+	    // $destination_lng_input = $_POST['destination_lng_input'];
 
-	    $depart_lat_input = $_POST['depart_lat_input'];
+	    // $depart_lat_input = $_POST['depart_lat_input'];
 
-	    $depart_lng_input = $_POST['depart_lng_input'];
+	    // $depart_lng_input = $_POST['depart_lng_input'];
 
 	    // echo "<h>". $destination_lat_input.  $destination_lng_input . $depart_lat_input . $depart_lng_input  ."</h>";
 	    // Do whatever you want with the $uid
@@ -61,7 +91,7 @@
 	    $result = shell_exec('python py/functions.py' . escapeshellarg(json_encode($data)));
 	    // $resultData = json_decode($result, true);
 	    echo $result;
-	}
+
 
 ?>
 <script src="js/jquery-3.1.1.js"></script>
@@ -72,5 +102,8 @@
 <script type="text/javascript" src="js/airport.js" ></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaopJNj_frN6fwXANNEKsK6LByLqdaZIA&libraries=places&callback=initAutocomplete"async defer></script>
 <script type="text/javascript" src="js/google-maps.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+
 
 </html>
+
