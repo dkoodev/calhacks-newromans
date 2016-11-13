@@ -127,9 +127,9 @@ a:hover {
 #destinationButton {
 	font-family: Bitter;
 	float: right;
-	font-size: 30px;
+	font-size: 20px;
 	color: gray;
-	padding: 15px;
+	padding: 3%;
 	background-color: white;
 	border-radius: 5px;
 }
@@ -172,9 +172,9 @@ a:hover {
 #startButton {
 	font-family: Bitter;
 	float: right;
-	font-size: 30px;
+	font-size: 20px;
 	color: gray;
-	padding: 15px;
+	padding: 3%;
 	background-color: white;
 	border-radius: 5px;
 }
@@ -276,10 +276,33 @@ footer {
 	font-family: Bitter;
 	position: absolute;
 	text-align: center;
-	bottom: 5px;
-	left: 350px;
-	right: 350px;
-	font-size: 20px;
+	bottom: 10px;
+	left: 200px;
+	right: 200px;
+	font-size: 15px;
 	color: black;
 	opacity: 0.8;
+}
+
+@media screen and (max-width: 640px) {
+	footer {
+		display: none;
+	}
+	#destinationButton {
+		float: none;
+		width: 20%;
+		margin: auto;
+	}
+	#destinationInput {
+		width: 100%;
+	}
+	#startButton {
+		float: none;
+		width: 20%;
+		margin: auto;
+	}
+	#startInput {
+		width: 100%;
+	}
+
 }
