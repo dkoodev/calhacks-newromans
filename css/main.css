@@ -212,6 +212,7 @@ a:hover {
 }
 
 #confirmationButton {
+	display: none;
 	margin-top: 3%;
 	font-family: Bitter;
 	text-align: center;
@@ -247,23 +248,3 @@ footer {
 	color: black;
 	opacity: 0.8;
 }
-/*
-#destination-lat-input {
-	display: none;
-}
-
-#destination-lng-input {
-	display: none;
-}
-
-#depart-lat-input {
-	display: none;
-}
-
-#depart-lng-input {
-	display: none;
-}
-
-.disappear {
-	display: none;
-}*/

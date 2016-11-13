@@ -70,18 +70,18 @@ document.getElementById('startButton').addEventListener('click', function() {
 	document.getElementById('start').style.display = "none";
 	start = document.getElementById('startInput').value;
 	document.getElementById('history').innerHTML += ",  from " + start;
+	document.getElementById('confirmation').style.display = "block";
 	document.getElementById('confirmationButton').style.display = "block";
 	var map = "https://maps.googleapis.com/maps/api/staticmap?size=600x300&maptype=roadmap&markers=color:red|label:A|" + start + "&markers=color:yellow|label:B|" + destination + "&key=AIzaSyCaopJNj_frN6fwXANNEKsK6LByLqdaZIA";
 	var x = document.createElement("img");
 	x.setAttribute("src", map);
-	document.getElementById('confirmationButton').appendChild(x);	
+	document.getElementById('confirmation').appendChild(x);	
 	
 
 });
 
 document.getElementById('confirmationButton').addEventListener('click', function() {
-	document.getElementById('confirmationButton').style.display = "none";
-		createURL(depart_name,"depart");
-	    createURL(destination_name,"destination");
+	document.getElementById('confirmation').style.display = "none";
+	document.getElementById('tester').style.display = "block";
 
 });
