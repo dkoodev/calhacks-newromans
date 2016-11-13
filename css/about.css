@@ -49,4 +49,11 @@ body {
 #registeredCities {
 	text-align: center;
 	font-size: 15px;
+	width: 90%;
+	padding-right: 3%;
+	margin: auto;
+}
+
+#registeredCities ul {
+	text-align: center;
 }
