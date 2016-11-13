@@ -21,18 +21,21 @@
 			<div id="destinationButton">Go</div>
 		</div>
 	<div id="start"><div id="startPrompt">Where are you starting from?</div><input type="text" id="startInput" placeholder="E.g. University of Southern California"><div id="startButton">Go</div></div>
+	
+	<form id="transfer" name="transfer" method="post">
+	<div class="disappear"><input id="destination_lat_input" name="destination_lat_input"></input>
+	<input id="destination_lng_input" name="destination_lng_input"></input>
+	<input id="depart_lat_input" name="depart_lat_input"></input>
+	<input id="depart_lng_input" name="depart_lng_input"></input></div>
+	<input id="confirmationButton" name="submit" type="submit" value="Confirm">
+	</form>
+
     <div id="map"></div>
+
     <div id="tester"> </div> 
     <footer>Travelyze &copy 2016 | Powered by <a href="https://developers.amadeus.com/">Amadeus</a>, <a href="https://developers.google.com/">Google</a>, and <a href="https://plot.ly/">Plotly</a></footer>
 	</body>
-	<form id="transfer" name="transfer" method="post">
-    	<div class="disappear"><input id="destination_lat_input" name="destination_lat_input"></input>
-    	<input id="destination_lng_input" name="destination_lng_input"></input>
-    	<input id="depart_lat_input" name="depart_lat_input"></input>
-    	<input id="depart_lng_input" name="depart_lng_input"></input></div>
-		<input id="confirmationButton" name="submit" type="submit" value="Confirm">
 
-	</form>
 
 <?php
 	
@@ -64,7 +67,7 @@
 	  	// var_dump($resultData);
 
 	  	$data = array($resultData[0]);
-	    $result = shell_exec('python py/functions.py ' . escapeshellarg(json_encode($data)));
+	    $result = shell_exec('python py/functions.py' . escapeshellarg(json_encode($data)));
 	    // $resultData = json_decode($result, true);
 	    echo $result;
 	}

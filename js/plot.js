@@ -25,6 +25,9 @@ var selectorOptions = {
 };
 
 document.getElementById('confirmationButton').addEventListener('click', function() {
+
+    window.setTimeout(function(){}, 2000);
+
     Plotly.d3.csv(rawDataURL, function(err, rawData) {
         if(err) throw err;
 
