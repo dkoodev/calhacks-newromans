@@ -25,8 +25,18 @@
 	<div id="confirmation"><div id="confirmationButton">Confirm</div></div>
 
 	<div id="image"> </div>
-
+	
     <div id="map"></div>
+    <div id="loading_gif_place">
+    	<br>
+    	<br>
+    	<br>
+    	<br>
+		<br>
+    	<br>
+    	<br>
+    	<br>
+    </div>
     <div id="tester"> </div> 
     <footer>Travelyze &copy 2016 | Powered by <a href="https://developers.amadeus.com/">Amadeus</a>, <a href="https://developers.google.com/">Google</a>, and <a href="https://plot.ly/">Plotly</a></footer>
 	</body>	

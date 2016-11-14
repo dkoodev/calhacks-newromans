@@ -232,7 +232,7 @@ a:hover {
 
 #image {
 	margin: auto;
-	width: 50%;
+	width: 45%;
 }
 
 #image img {
@@ -241,6 +241,13 @@ a:hover {
 	width:100%;
 	clear:middle;
 
+}
+#loading_gif_place{
+	margin: auto;
+	display: none;
+}
+#loading_gif_place img{
+	margin:auto;
 }
 
 #confirmationButton {

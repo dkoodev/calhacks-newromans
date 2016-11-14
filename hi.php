@@ -102,7 +102,7 @@ $x = $name1 . $name2 . $name3 . $name4 ;
 
 
 	$result = shell_exec('python py/maps.py ' . escapeshellarg($x));
-
+	
 
 // if ($user_os == 'Mac OS X' || $user_os == 'Mac OS 9' || $user_os=='Linux') {
 // }else{

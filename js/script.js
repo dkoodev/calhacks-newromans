@@ -85,9 +85,22 @@ document.getElementById('startButton').addEventListener('click', function() {
 document.getElementById('confirmationButton').addEventListener('click', function() {
 	document.getElementById('confirmation').style.display = "none";
 	document.getElementById('submit').style.display = "block";
-
+	var loading_gif_resource = "/resources/default.gif";
+	var y = document.createElement("img");
+	y.setAttribute("src", loading_gif_resource);
+	y.setAttribute("id","loading_gif");
+	y.setAttribute("align","middle");
+	document.getElementById('loading_gif_place').appendChild(y);
+	document.getElementById('loading_gif').style.display = "none";
+	
 });
 
 document.getElementById('submit').addEventListener('click', function() {
 	document.getElementById('submit').style.display = "none";
+	document.getElementById('image').style.display = "none";
+	document.getElementById('loading_gif').style.display = "block";
+	document.getElementById('loading_gif_place').style.display = "block";
+
+
+
 });

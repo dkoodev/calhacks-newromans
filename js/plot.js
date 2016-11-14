@@ -53,6 +53,7 @@ document.getElementById('submit').addEventListener('click', function() {
 
         Plotly.plot(document.getElementById('tester'), data, layout
              ,{displayModeBar: false});
+        document.getElementById('loading_gif_place').style.display = "none";
     });
 
 });
