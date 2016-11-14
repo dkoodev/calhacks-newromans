@@ -71,10 +71,13 @@ document.getElementById('startButton').addEventListener('click', function() {
 	document.getElementById('history').innerHTML += ",  from " + start;
 	document.getElementById('confirmation').style.display = "block";
 	document.getElementById('confirmationButton').style.display = "block";
+	document.getElementById('image').style.display = "block";
 	var map = "https://maps.googleapis.com/maps/api/staticmap?size=600x300&maptype=roadmap&markers=color:red|label:A|" + start + "&markers=color:yellow|label:B|" + destination + "&key=AIzaSyCaopJNj_frN6fwXANNEKsK6LByLqdaZIA";
 	var x = document.createElement("img");
 	x.setAttribute("src", map);
-	document.getElementById('confirmation').appendChild(x);	
+	x.setAttribute("id","image_id");
+	x.setAttribute("align","middle");
+	document.getElementById('image').appendChild(x);	
 	
 
 });

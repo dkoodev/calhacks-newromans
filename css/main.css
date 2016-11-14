@@ -193,7 +193,7 @@ a:hover {
 }
 
 #map img {
-	width: 100%;
+	width:50%;
 	margin: auto;
 }
 
@@ -223,11 +223,24 @@ a:hover {
 #confirmation {
 	width: 100%;
 	padding: auto;
+	margin: auto;
 }
 
 #confirmation img {
-	padding-left: 28%;
-	padding-top: 2%;
+	margin: auto;
+}
+
+#image {
+	margin: auto;
+	width: 50%;
+}
+
+#image img {
+/*	padding-top: 5%;
+	padding-left: 14%;*/
+	width:100%;
+	clear:middle;
+
 }
 
 #confirmationButton {
