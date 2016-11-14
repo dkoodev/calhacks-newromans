@@ -4,13 +4,21 @@ import json
 import csv
 import time
 import sys, json
-
+import urllib3
+import certifi
+import urllib3.contrib.pyopenssl
+urllib3.contrib.pyopenssl.inject_into_urllib3()
+http = urllib3.PoolManager(
+	cert_reqs='CERT_REQUIRED',
+	ca_certs=certifi.where())
 # Load the data that PHP sent us
 try:
     data = (sys.argv[1])
 except:
     print "ERROR"
     sys.exit(1)
+
+# urllib3.disable_warnings()
 
 # data = "58.278356longsighaoighos=-0.08187541fahiughisdihzo=32.7853183dfhaiusgagajhg=-19.71352814"
 cotemps = []
